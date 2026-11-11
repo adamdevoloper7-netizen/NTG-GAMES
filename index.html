@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTG - THE LAST SPIN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">NTG</div>
+      <div class="brand-line"></div>
+      <div>
+        <strong>NTG</strong>
+        <small>THE LAST SPIN</small>
+      </div>
+    </div>
+    <div class="event-tag">GRADUATION NIGHT 2026</div>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">ONE NIGHT · ONE WHEEL · UNFORGETTABLE MEMORIES</p>
+      <h1>THE LAST <span>SPIN</span></h1>
+      <p class="subtitle">آخر لفة… وآخر تحدّي قبل ما الحكاية تخلص!</p>
+    </section>
+
+    <section class="game-grid">
+      <aside class="side-panel">
+        <h2>لوحة المنافسة</h2>
+
+        <div class="team-card active" id="teamCardA">
+          <div class="team-icon">A</div>
+          <div class="team-info">
+            <span>TEAM 01</span>
+            <input id="teamAName" value=" TEAM 1">
+          </div>
+          <strong id="scoreA">0</strong>
+        </div>
+
+        <div class="team-card" id="teamCardB">
+          <div class="team-icon dark">B</div>
+          <div class="team-info">
+            <span>TEAM 02</span>
+            <input id="teamBName" value=" TEAM 2  ">
+          </div>
+          <strong id="scoreB">0</strong>
+        </div>
+
+        <div class="turn-box">
+          <small>الدور الحالي</small>
+          <strong id="currentTeamLabel">الفريق الأحمر</strong>
+          <button id="switchTeam">بدّل الفريق ↔</button>
+        </div>
+
+        <button class="reset-btn" id="resetGame">إعادة ضبط النقاط</button>
+      </aside>
+
+      <section class="wheel-panel">
+        <div class="wheel-heading">
+          <span>اختاروا حظكم</span>
+          <span id="spinCount">ROUND 01</span>
+        </div>
+
+        <div class="mode-tabs">
+          <button class="mode-btn active" data-mode="graduates">🎓 سنة تالتة</button>
+          <button class="mode-btn" data-mode="attendees">🎉 باقي الحاضرين</button>
+        </div>
+
+        <div class="wheel-wrap">
+          <div class="pointer"></div>
+          <canvas id="wheel" width="720" height="720"></canvas>
+          <div class="wheel-center">
+            <span>NTG</span>
+            <small>SPIN IT!</small>
+          </div>
+        </div>
+
+        <button class="spin-button" id="spinButton">⟳ لفّ العجلة</button>
+        <p class="wheel-hint">كل لفة = تحدّي جديد… مين هيكسب؟</p>
+      </section>
+
+      <aside class="side-panel rules-panel">
+        <h2>طريقة اللعب</h2>
+        <div class="rule"><b>01</b><p>اختاروا الفريق اللي عليه الدور.</p></div>
+        <div class="rule"><b>02</b><p>اختاروا مجموعة التحديات المناسبة.</p></div>
+        <div class="rule"><b>03</b><p>اضغطوا على زر لفّ العجلة.</p></div>
+        <div class="rule"><b>04</b><p>نفّذوا التحدّي، ولو نجحتوا خدوا نقطة.</p></div>
+        <div class="note-box">✦ NTG GAMES</div>
+      </aside>
+    </section>
+
+    <footer>
+      <span>CLARITY NETWORKS INC.</span>
+      <span>MADE FOR THE NTG GRADUATION NIGHT</span>
+    </footer>
+  </main>
+
+  <div class="modal" id="resultModal">
+    <div class="modal-backdrop"></div>
+
+    <div class="result-card">
+      <div class="result-topline">
+        <span>NTG CHALLENGE</span>
+        <span id="resultCategory">CHALLENGE</span>
+      </div>
+
+      <div class="result-symbol" id="resultSymbol">⚡</div>
+      <p>التحدّي وقع على…</p>
+      <h2 id="resultTitle">جاهزين؟</h2>
+      <p id="resultDescription" class="result-description"></p>
+
+      <div class="result-actions">
+        <button class="success-btn" id="successButton">كسبنا التحدّي +1</button>
+        <button class="skip-btn" id="skipButton">عدّي التحدّي</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
